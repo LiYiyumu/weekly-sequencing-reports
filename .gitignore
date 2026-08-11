@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js build output (generated, not committed)
+/.next/
+/out/
+
+# logs
+*.log
+build*.log
+npm-debug.log*
+
+# local secrets (we keep .env: it only sets NEXT_TELEMETRY_DISABLED)
+.env.local
+.env*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# next generated
+next-env.d.ts
+*.tsbuildinfo

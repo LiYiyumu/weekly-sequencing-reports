@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-08-11T15:26:02",
+  "hub": "D:\\Workbuddy_data\\sequencing-weekly-hub",
+  "weeks": [
+    {
+      "isoWeek": "2026-W31",
+      "industry": {
+        "docx": false,
+        "json": false
+      },
+      "tech": {
+        "docx": true,
+        "json": true
+      }
+    },
+    {
+      "isoWeek": "2026-W32",
+      "industry": {
+        "docx": true,
+        "json": true
+      },
+      "tech": {
+        "docx": true,
+        "json": true
+      }
+    }
+  ],
+  "gaps": []
+}

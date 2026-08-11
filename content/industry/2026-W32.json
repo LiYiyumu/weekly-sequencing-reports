@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "type": "industry",
+    "isoWeek": "2026-W32",
+    "year": 2026,
+    "week": 32,
+    "weekStart": "2026-08-03",
+    "weekEnding": "2026-08-09",
+    "generatedAt": "2026-08-11T15:26:02",
+    "source": {
+      "docx": "2026-W32.docx",
+      "originalDocx": "sequencing_industry_weekly_2026-08-09.docx",
+      "contentJson": "weekly_content.json"
+    }
+  },
+  "content": {
+    "headlines": [
+      "PacBio 发布 Vega SPRQ-Nx 化学（8/5）：HiFi 数据量提升 50%、单 run 成本降约 40%，并新增快速 run 与甲基化 / 合规能力。",
+      "Illumina 在中国推出本地制造的 MiSeq i100 Series-CN 测序仪（8/6）。",
+      "中国商务部将 Applied DNA Sciences 等 6 家美企列入黑名单（8/5），禁止在华商业活动（涉强迫劳动制裁）。",
+      "全基因组测序公司 Inocras 完成 3100 万美元 B-3 轮融资（8/4），累计募资约 1 亿美元。",
+      "PacBio 裁员数十人（8/5 当周），覆盖技术与商业职能。",
+      "GeneDx、Revvity 发布 Q2 业绩（8/4）：GeneDx 营收 +11% 但启动重组，Revvity 微增并计划剥离中国 ImmunoDx 业务。"
+    ],
+    "company": [
+      {
+        "cat": "短读长 / 综合平台",
+        "items": [
+          {
+            "prod": "Illumina — MiSeq i100 Series-CN（中国本土化上市，8/6）",
+            "highlights": [
+              "首批由因美纳中国生产制造基地生产并交付客户，践行「在中国，为中国」本土化战略。",
+              "搭配最新 1000 循环试剂，支持双端 500 bp（PE500）测序。",
+              "SE100 模式最快 2.5 小时下机，适合病原体快速监测。",
+              "试剂支持常温运输与保存（无需冷链）。",
+              "机载二级分析：内置 FPGA + GPU 加速。"
+            ],
+            "principle": "平台基于 Illumina 成熟的边合成边测序（SBS）化学；差异化在于机载 FPGA+GPU 在测序运行中同步完成数据降维、质量评分与变异初筛（「边测序边计算」）。"
+          }
+        ]
+      },
+      {
+        "cat": "长读长",
+        "items": [
+          {
+            "prod": "PacBio — Vega SPRQ-Nx 化学（8/5）",
+            "highlights": [
+              "单 run HiFi 数据量 60→90 Gb（+50%），美国目录价 $1100→$995。",
+              "新增 2 h / 4 h 快速 run；5hmC caller 及改进 5mC/6mA；支持 21 CFR Part 11 合规。",
+              "同期 PacBio 裁员数十人。"
+            ],
+            "principle": "Vega 为台式 HiFi 长读长系统，底层 SMRT（Single Molecule, Real-Time）原理：ZMW 中单个 DNA 聚合酶实时合成，dNTP 携带荧光、相机实时记录，无需 PCR 扩增；同模板多次读取（≥10 pass）得 HiFi reads。SPRQ-Nx 核心创新是 SMRT Cell 多次复用降本。"
+          }
+        ]
+      }
+    ],
+    "financing": [
+      [
+        "Inocras",
+        "B-3 轮 3100 万美元（8/4）",
+        "全基因组测序服务商，累计募资约 1 亿美元，用于拓展美国商业与运营基础设施。"
+      ]
+    ],
+    "regulation": [
+      [
+        "中国制裁 6 家美企（8/5）",
+        "商务部禁止 Applied DNA Sciences 等 6 家美国公司的商业活动（涉强迫劳动制裁），影响相关企业在华业务。"
+      ]
+    ],
+    "market": [
+      [
+        "GeneDx Q2（8/4）",
+        "营收 +11%，但启动重组；外显子 / 基因组测试平均报销同比下降。"
+      ],
+      [
+        "Revvity Q2（8/4）",
+        "营收微增 1%，计划 2027 年剥离中国 ImmunoDx 业务，并上调剔除该业务后的全年指引。"
+      ]
+    ]
+  }
+}
