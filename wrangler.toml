@@ -1,0 +1,6 @@
+name = "weekly-sequencing-reports"
+compatibility_date = "2026-08-12"
+assets = {
+  directory = "./out",
+  not_found_handling = "404-page"
+}
