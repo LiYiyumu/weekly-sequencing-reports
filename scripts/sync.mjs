@@ -34,8 +34,10 @@ function copyFile(src, dst) {
 
 function main() {
   if (!fs.existsSync(SOURCE)) {
-    console.error(`[sync] 源仓库不存在: ${SOURCE}`);
-    process.exit(1);
+    // CI/云端构建机（Vercel/Netlify 等）没有本地 D 盘统一仓库：跳过同步，
+    // 直接使用仓库内已提交的 content/ 与 public/docs/（由每周自动化 push 刷新）。
+    console.warn(`[sync] 源仓库不存在(${SOURCE})，跳过同步（将直接使用已提交的 content/）`);
+    return;
   }
   ensureDir(path.join(root, "content", "tech"));
   ensureDir(path.join(root, "content", "industry"));
