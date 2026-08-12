@@ -1,0 +1,39 @@
+name: Build and sync to Gitee
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+        run: npm run build
+
+      - name: Push out/ to Gitee repo
+        env:
+          GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
+          GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
+        run: |
+          cd out
+          git init -b master
+          git config user.email "deploy@github-actions.local"
+          git config user.name "GitHub Actions"
+          git add -A
+          git commit -m "deploy: $(date +%Y%m%d-%H%M%S)"
+          git push -f "https://${GITEE_USERNAME}:${GITEE_PASSWORD}@gitee.com/${GITEE_USERNAME}/${{ secrets.GITEE_USERNAME }}.git" master
